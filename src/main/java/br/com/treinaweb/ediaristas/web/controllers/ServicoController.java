@@ -2,8 +2,10 @@ package br.com.treinaweb.ediaristas.web.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -42,7 +44,23 @@ public class ServicoController {
 
         repository.save(servico);
 
-        return "redirect:/admin/servicos/lista";
+        return "redirect:/admin/servicos";
+    }
+
+    @GetMapping("/{id}/excluir")
+    public String excluir(@PathVariable Long id) {
+
+        repository.deleteById(id);
+
+        return "redirect:/admin/servicos";
+
+    }
+
+    @GetMapping("/{id}/editar")
+    public String editar(@PathVariable Long id) {
+
+        
+        return "nada";
     }
 
     @ModelAttribute("icones")
