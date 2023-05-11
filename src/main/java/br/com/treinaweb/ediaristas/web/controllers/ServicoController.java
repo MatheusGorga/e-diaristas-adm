@@ -2,14 +2,12 @@ package br.com.treinaweb.ediaristas.web.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-
 import br.com.treinaweb.ediaristas.core.enums.Icone;
 import br.com.treinaweb.ediaristas.core.models.Servico;
 import br.com.treinaweb.ediaristas.core.repositories.ServicoRepository;
@@ -47,6 +45,24 @@ public class ServicoController {
         return "redirect:/admin/servicos";
     }
 
+    @GetMapping("/{id}/editar")
+    public ModelAndView editar(@PathVariable Long id) {
+
+        var modelAndView = new ModelAndView("admin/servico/form");
+
+        modelAndView.addObject("servico", repository.getReferenceById(id));
+
+        return modelAndView;
+    }
+
+    @PostMapping("/{id}/editar")
+    public String editar(@PathVariable Long id, Servico servico) {
+
+        repository.save(servico);
+
+        return "redirect:/admin/servicos";
+    }
+
     @GetMapping("/{id}/excluir")
     public String excluir(@PathVariable Long id) {
 
@@ -56,16 +72,11 @@ public class ServicoController {
 
     }
 
-    @GetMapping("/{id}/editar")
-    public String editar(@PathVariable Long id) {
-
-        
-        return "nada";
-    }
-
     @ModelAttribute("icones")
     public Icone[] getIcones() {
+
         return Icone.values();
+
     }
 
 }
