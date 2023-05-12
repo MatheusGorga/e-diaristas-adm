@@ -1,5 +1,6 @@
 package br.com.treinaweb.ediaristas.web.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +18,7 @@ import jakarta.validation.Valid;
 @RequestMapping("/admin/servicos")
 public class ServicoController {
 
+    @Autowired
     private WebServicoService service;
 
     @GetMapping
