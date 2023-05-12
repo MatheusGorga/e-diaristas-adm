@@ -22,6 +22,9 @@
                         th:field="*{nome}"
                         class="form-control"
                       />
+                      <ul>
+                        <li class="text-danger" th:each="erro : ${#fields.errors('nome')}" th:text="${erro}"></li>
+                      </ul>
                     </div>
                   </div>
                   <div class="col-md-6 col-sm-12">
@@ -32,6 +35,9 @@
                         th:field="*{valorMinimo}"
                         class="form-control"
                       />
+                      <ul>
+                        <li class="text-danger" th:each="erro : ${#fields.errors('valorMinimo')}" th:text="${erro}"></li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -45,6 +51,9 @@
                           th:field="*{qtdHoras}"
                           class="form-control"
                         />
+                        <ul>
+                          <li class="text-danger" th:each="erro : ${#fields.errors('qtdHoras')}" th:text="${erro}"></li>
+                        </ul>
                       </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
@@ -55,6 +64,9 @@
                           th:field="*{porcentagemComissao}"
                           class="form-control"
                         />
+                        <ul>
+                          <li class="text-danger" th:each="erro : ${#fields.errors('porcentagemComissao')}" th:text="${erro}"></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -68,6 +80,9 @@
                           th:field="*{horasQuarto}"
                           class="form-control"
                         />
+                        <ul>
+                          <li class="text-danger" th:each="erro : ${#fields.errors('horasQuarto')}" th:text="${erro}"></li>
+                        </ul>
                       </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
@@ -78,6 +93,9 @@
                           th:field="*{valorQuarto}"
                           class="form-control"
                         />
+                        <ul>
+                          <li class="text-danger" th:each="erro : ${#fields.errors('valorQuarto')}" th:text="${erro}"></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -91,6 +109,9 @@
                           th:field="*{horasSala}"
                           class="form-control"
                         />
+                        <ul>
+                          <li class="text-danger" th:each="erro : ${#fields.errors('horasSala')}" th:text="${erro}"></li>
+                        </ul>
                       </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
@@ -101,6 +122,9 @@
                           th:field="*{valorSala}"
                           class="form-control"
                         />
+                        <ul>
+                          <li class="text-danger" th:each="erro : ${#fields.errors('valorSala')}" th:text="${erro}"></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -114,6 +138,9 @@
                           th:field="*{horasBanheiro}"
                           class="form-control"
                         />
+                        <ul>
+                          <li class="text-danger" th:each="erro : ${#fields.errors('horasBanheiro')}" th:text="${erro}"></li>
+                        </ul>
                       </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
@@ -124,6 +151,9 @@
                           th:field="*{valorBanheiro}"
                           class="form-control"
                         />
+                        <ul>
+                          <li class="text-danger" th:each="erro : ${#fields.errors('valorBanheiro')}" th:text="${erro}"></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -137,6 +167,9 @@
                           th:field="*{horasCozinha}"
                           class="form-control"
                         />
+                        <ul>
+                          <li class="text-danger" th:each="erro : ${#fields.errors('horasCozinha')}" th:text="${erro}"></li>
+                        </ul>
                       </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
@@ -147,6 +180,9 @@
                           th:field="*{valorCozinha}"
                           class="form-control"
                         />
+                        <ul>
+                          <li class="text-danger" th:each="erro : ${#fields.errors('valorCozinha')}" th:text="${erro}"></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -160,6 +196,9 @@
                           th:field="*{horasQuintal}"
                           class="form-control"
                         />
+                        <ul>
+                          <li class="text-danger" th:each="erro : ${#fields.errors('horasQuintal')}" th:text="${erro}"></li>
+                        </ul>
                       </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
@@ -170,6 +209,9 @@
                           th:field="*{valorQuintal}"
                           class="form-control"
                         />
+                        <ul>
+                          <li class="text-danger" th:each="erro : ${#fields.errors('valorQuintal')}" th:text="${erro}"></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -184,6 +226,9 @@
                           th:field="*{horasOutros}"
                           class="form-control"
                         />
+                        <ul>
+                          <li class="text-danger" th:each="erro : ${#fields.errors('horasOutros')}" th:text="${erro}"></li>
+                        </ul>
                       </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
@@ -194,6 +239,9 @@
                           th:field="*{valorOutros}"
                           class="form-control"
                         />
+                        <ul>
+                          <li class="text-danger" th:each="erro : ${#fields.errors('valorOutros')}" th:text="${erro}"></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -215,6 +263,9 @@
                           th:field="*{posicao}"
                           class="form-control"
                         />
+                        <ul>
+                          <li class="text-danger" th:each="erro : ${#fields.errors('posicao')}" th:text="${erro}"></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
