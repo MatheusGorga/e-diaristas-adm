@@ -1,6 +1,8 @@
 package br.com.treinaweb.ediaristas.web.dtos;
 
 import java.math.BigDecimal;
+import org.springframework.format.annotation.NumberFormat;
+import org.springframework.format.annotation.NumberFormat.Style;
 
 import br.com.treinaweb.ediaristas.core.enums.Icone;
 import jakarta.validation.constraints.Max;
@@ -23,6 +25,7 @@ public class ServicoForm {
 
     @NotNull
     @PositiveOrZero
+    @NumberFormat(style = Style.CURRENCY, pattern = "#,##0.00")
     private BigDecimal valorMinimo;
 
     @NotNull
@@ -32,6 +35,7 @@ public class ServicoForm {
     @NotNull
     @PositiveOrZero
     @Max(100)
+    @NumberFormat(style = Style.CURRENCY, pattern = "#,##0.00")
     private BigDecimal porcentagemComissao;
 
     @NotNull
@@ -40,46 +44,52 @@ public class ServicoForm {
 
     @NotNull
     @PositiveOrZero
+    @NumberFormat(style = Style.CURRENCY, pattern = "#,##0.00")
     private BigDecimal valorQuarto;
 
-     @NotNull
+    @NotNull
     @PositiveOrZero
     private Integer horasSala;
 
-     @NotNull
+    @NotNull
     @PositiveOrZero
+    @NumberFormat(style = Style.CURRENCY, pattern = "#,##0.00")
     private BigDecimal valorSala;
 
-     @NotNull
+    @NotNull
     @PositiveOrZero
     private Integer horasBanheiro;
 
-     @NotNull
+    @NotNull
     @PositiveOrZero
+    @NumberFormat(style = Style.CURRENCY, pattern = "#,##0.00")
     private BigDecimal valorBanheiro;
 
-     @NotNull
+    @NotNull
     @PositiveOrZero
     private Integer horasCozinha;
 
-     @NotNull
+    @NotNull
     @PositiveOrZero
+    @NumberFormat(style = Style.CURRENCY, pattern = "#,##0.00")
     private BigDecimal valorCozinha;
 
-     @NotNull
+    @NotNull
     @PositiveOrZero
     private Integer horasQuintal;
 
-     @NotNull
+    @NotNull
     @PositiveOrZero
+    @NumberFormat(style = Style.CURRENCY, pattern = "#,##0.00")
     private BigDecimal valorQuintal;
 
-     @NotNull
+    @NotNull
     @PositiveOrZero
     private Integer horasOutros;
 
     @NotNull
     @PositiveOrZero
+    @NumberFormat(style = Style.CURRENCY, pattern = "#,##0.00")
     private BigDecimal valorOutros;
 
     @NotNull
