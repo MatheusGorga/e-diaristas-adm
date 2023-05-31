@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.treinaweb.ediaristas.core.enums.TipoUsuario;
-import br.com.treinaweb.ediaristas.core.exeptions.ServicoNaoEncontradoException;
 import br.com.treinaweb.ediaristas.core.exeptions.UsuarioNaoEncontradoException;
 import br.com.treinaweb.ediaristas.core.models.Usuario;
 import br.com.treinaweb.ediaristas.core.repositories.UsuarioRepository;
